@@ -10,8 +10,8 @@ android {
         applicationId "org.woheller69.gptassist"
         minSdk 21
         targetSdk 35
-        versionCode 240
-        versionName "2.40"
+        versionCode 241
+        versionName "2.40-guard"
     }
 
     buildTypes {
@@ -24,13 +24,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    
+
     lintOptions {
-        disable "MissingTranslation" // Translation is crowd-sourced, so this lint warning is useless
+        disable "MissingTranslation"
     }
 }
 
 dependencies {
     implementation 'androidx.webkit:webkit:1.12.1'
+    implementation 'androidx.core:core:1.13.1'
     implementation 'com.github.woheller69:FreeDroidWarn:+'
 }
