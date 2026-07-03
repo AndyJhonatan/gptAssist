@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 35
+    namespace 'org.woheller69.gptassist'
+    android.buildFeatures.buildConfig true
+    defaultConfig {
+        applicationId "org.woheller69.gptassist"
+        minSdk 21
+        targetSdk 35
+        versionCode 241
+        versionName "2.40-guard"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        disable "MissingTranslation"
+    }
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.12.1'
+    implementation 'androidx.core:core:1.13.1'
+    implementation 'com.github.woheller69:FreeDroidWarn:+'
+}
