@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: acciones/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
 
       # Set Current Date As Env Variable
       - name: Set current date as env variable
